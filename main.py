@@ -10,7 +10,7 @@
 import streamlit as st
 from openai import OpenAI
 
-modelo = OpenAI(api_key="")
+modelo = OpenAI(api_key="coloque sua api aqui!")
 
 st.write("### ChatBot com IA") # markdown
 
@@ -48,5 +48,6 @@ if mensagem_usuario:
     st.chat_message("assistant").write(resposta_ia)
     mensagem_ia = {"role": "assistant", "content": resposta_ia}
     st.session_state["lista_mensagens"].append(mensagem_ia)
+
 
 
